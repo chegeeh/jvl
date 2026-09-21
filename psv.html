@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSV Insurance — Joviul Insurance</title>
+<meta name="description" content="Matatu, bus, taxi, car hire and tuk tuk cover. Motor PSV, chauffeur-driven and institutional cover at unbeatable rates.">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="reg">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+    Regulated by the Insurance Regulatory Authority (IRA)
+  </div>
+  <div class="topbar-links">
+    <a href="mailto:visioninsurance30@gmail.com">visioninsurance30@gmail.com</a>
+    <a href="tel:+254711446293">+254 711 446 293</a>
+  </div>
+</div>
+
+<nav>
+  <a href="index.html" class="logo">
+    <img src="assets/img/logo-mark.png" alt="Joviul Insurance">
+    <span class="logo-word">Joviul <em>Insurance</em></span>
+  </a>
+  <div class="nav-links">
+    <a href="private.html">Private Car</a>
+    <a href="commercial.html">Commercial</a>
+    <a href="psv.html" class="current">PSV</a>
+    <a href="other-products.html">More Products</a>
+    <a href="checkout.html" class="btn btn-ink btn-sm">Pay Now</a>
+  </div>
+  <button class="nav-toggle" aria-label="Open menu"><span></span></button>
+</nav>
+
+<div class="nav-drawer">
+  <div class="nav-drawer-backdrop"></div>
+  <div class="nav-drawer-panel">
+    <button class="nav-drawer-close" aria-label="Close menu">✕</button>
+    <a href="index.html">Home</a>
+    <a href="private.html">Private Car</a>
+    <a href="commercial.html">Commercial</a>
+    <a href="psv.html">PSV</a>
+    <a href="other-products.html">More Products</a>
+    <a href="checkout.html">Pay Now</a>
+  </div>
+</div>
+
+<div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span>PSV Insurance</div>
+
+<section class="page-hero">
+  <div class="wrap page-hero-inner">
+    <div>
+      <div class="eyebrow-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>Motor Insurance</div>
+      <h1 class="page-hero-title"><span class="accent">PSV</span> Insurance</h1>
+      <p class="page-hero-sub">Matatu, bus, taxi, car hire and tuk tuk. Motor PSV, chauffeur-driven and institutional cover at unbeatable rates.</p>
+    </div>
+    <div class="page-hero-imgs"><img src="assets/img/psv-matatu.webp" alt="Matatu"></div>
+  </div>
+</section>
+
+<div class="wrap main-grid">
+  <div class="form-card">
+    <div class="form-card-title">Get a quote — fill in your vehicle details</div>
+    <div class="form-grid">
+      <div class="field full"><label>Full Name</label><input id="name" data-field="name" type="text" placeholder="Your full name"></div>
+      <div class="field"><label>Phone Number *</label><input id="phone" data-field="phone" type="tel" placeholder="+254 7XX XXX XXX"></div>
+      <div class="field"><label>Email (optional)</label><input id="email" data-field="email" type="email" placeholder="your@email.com"></div>
+      <div class="field"><label>Vehicle Value in KShs. (optional)</label><input id="value" data-field="value" type="number" placeholder="e.g. 2,000,000"></div>
+      <div class="field"><label>Registration Number</label><input id="reg" data-field="reg" type="text" placeholder="e.g. KAA 123A"></div>
+      <div class="field">
+        <label>Vehicle Type</label>
+        <select id="vtype" data-field="vtype">
+          <option value="">Select vehicle type</option>
+          <option value="Saloon">Saloon</option>
+          <option value="Matatu">Matatu</option>
+          <option value="Bus">Bus</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Cover Type</label>
+        <select id="cover" data-field="cover">
+          <option value="">Select cover type</option>
+          <option value="Comprehensive">Comprehensive</option>
+          <option value="Third Party">Third Party</option>
+        </select>
+      </div>
+      <div class="field full">
+        <label>Risk Class Type</label>
+        <select id="risk" data-field="risk">
+          <option value="">Select risk class type</option>
+          <option value="Chauffeur Driven">Chauffeur Driven</option>
+          <option value="Institutional Vehicles">Institutional Vehicles</option>
+          <option value="Motor PSV">Motor PSV</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-btns">
+      <button class="btn btn-wa btn-block" onclick="sendQuoteWA('PSV Insurance')">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.057 1.475 5.776L.057 24l6.345-1.652A11.951 11.951 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.027-1.38l-.361-.214-3.737.979.995-3.633-.237-.376A9.818 9.818 0 1112 21.818z"/></svg>
+        Send via WhatsApp
+      </button>
+      <button class="btn btn-outline btn-block" onclick="sendQuoteSMS('PSV Insurance')">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+        Send via SMS
+      </button>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="side-card">
+      <div class="side-card-title">Premium Summary</div>
+      <div class="price-row"><span class="price-label">Annual premium</span><span class="price-val gold">KShs. 88,697</span></div>
+      <div class="price-row"><span class="price-label">Monthly instalment</span><span class="price-val">Contact us for options</span></div>
+      <div class="price-row"><span class="price-label">M-PESA Paybill</span><span class="price-val">247247</span></div>
+      <div class="price-row"><span class="price-label">Account No.</span><span class="price-val">0711446293</span></div>
+      <button class="btn btn-gold btn-block mt-lg" onclick="goCheckout()">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/></svg>
+        Proceed to Pay (M-PESA)
+      </button>
+      <button class="btn btn-outline btn-block mt-lg" style="margin-top:.75rem" onclick="talkAgent('PSV Insurance')">
+        Talk to an Agent
+      </button>
+    </div>
+    <div class="side-card">
+      <div class="side-card-title">What's Covered</div>
+      <div class="info-list">
+        <div class="info-item">Saloon, matatu, bus</div>
+        <div class="info-item">Comprehensive or Third Party</div>
+        <div class="info-item">Chauffeur-driven, Motor PSV, institutional</div>
+        <div class="info-item">Contact us for instalment payment options</div>
+      </div>
+    </div>
+    <div class="side-card">
+      <div class="side-card-title">Requirements</div>
+      <div class="info-list">
+        <div class="info-item">Copy of PIN certificate</div>
+        <div class="info-item">Copy of ID card</div>
+        <div class="info-item">Car logbook</div>
+        <div class="info-item">Valuation letter (comprehensive)</div>
+        <div class="info-item">SACCO name / certificate of incorporation</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand"><img src="assets/img/logo-mark.png" alt=""><span class="footer-brand-word">Joviul Insurance</span></div>
+        <div class="footer-reg">Regulated by the Insurance Regulatory Authority (IRA). Cover is underwritten by our licensed partner insurers.</div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Cover</h4>
+          <a href="private.html">Private Car</a>
+          <a href="commercial.html">Commercial</a>
+          <a href="psv.html">PSV</a>
+          <a href="other-products.html">Travel · Home · Student</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="index.html#about">About Us</a>
+          <a href="checkout.html">Pay Now</a>
+          <a href="mailto:visioninsurance30@gmail.com">Email Us</a>
+          <a href="tel:+254711446293">Call Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Mburu Gichua Road, Ereto Plaza 3rd Floor, Nakuru City</span>
+      <span>© 2026 Joviul Insurance Services ™ · joviul.co.ke</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/254711446293" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.057 1.475 5.776L.057 24l6.345-1.652A11.951 11.951 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.027-1.38l-.361-.214-3.737.979.995-3.633-.237-.376A9.818 9.818 0 1112 21.818z"/></svg>
+</a>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

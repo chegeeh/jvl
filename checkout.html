@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Joviul Insurance</title>
+<meta name="description" content="Pay your Joviul Insurance premium via M-PESA, or talk to an agent to complete your cover.">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="reg">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+    Regulated by the Insurance Regulatory Authority (IRA)
+  </div>
+  <div class="topbar-links">
+    <a href="mailto:visioninsurance30@gmail.com">visioninsurance30@gmail.com</a>
+    <a href="tel:+254711446293">+254 711 446 293</a>
+  </div>
+</div>
+
+<nav>
+  <a href="index.html" class="logo">
+    <img src="assets/img/logo-mark.png" alt="Joviul Insurance">
+    <span class="logo-word">Joviul <em>Insurance</em></span>
+  </a>
+  <div class="nav-links">
+    <a href="private.html">Private Car</a>
+    <a href="commercial.html">Commercial</a>
+    <a href="psv.html">PSV</a>
+    <a href="other-products.html">More Products</a>
+    <a href="checkout.html" class="btn btn-ink btn-sm">Pay Now</a>
+  </div>
+  <button class="nav-toggle" aria-label="Open menu"><span></span></button>
+</nav>
+
+<div class="nav-drawer">
+  <div class="nav-drawer-backdrop"></div>
+  <div class="nav-drawer-panel">
+    <button class="nav-drawer-close" aria-label="Close menu">✕</button>
+    <a href="index.html">Home</a>
+    <a href="private.html">Private Car</a>
+    <a href="commercial.html">Commercial</a>
+    <a href="psv.html">PSV</a>
+    <a href="other-products.html">More Products</a>
+    <a href="checkout.html">Pay Now</a>
+  </div>
+</div>
+
+<div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span>Checkout</div>
+
+<div class="wrap" style="max-width:900px;padding-top:2.5rem;padding-bottom:5rem">
+  <div class="section-head" style="margin-bottom:2rem">
+    <div class="kicker">Secure checkout</div>
+    <h2>Complete your payment</h2>
+    <p>Pay your premium via M-PESA, or speak with one of our agents to get started.</p>
+  </div>
+
+  <!-- PLAN PICKER -->
+  <div class="summary-card">
+    <div class="summary-title">Select your cover</div>
+    <select class="summary-select" id="plan-select" onchange="updatePlan()">
+      <option value="private-annual">Private Car — Annual (KShs. 7,574)</option>
+      <option value="private-monthly">Private Car — Instalment (KShs. 3,787 × 2)</option>
+      <option value="commercial-annual">Commercial Vehicle — Annual (KShs. 7,574)</option>
+      <option value="commercial-monthly">Commercial Vehicle — Instalment (KShs. 3,787 × 2)</option>
+      <option value="psv-annual">PSV Matatu — Annual (KShs. 88,697)</option>
+      <option value="psv-monthly">PSV Matatu — Monthly (KShs. 7,925)</option>
+    </select>
+    <div class="selected-price">
+      <div>
+        <div class="sp-label">Amount to pay</div>
+        <div class="sp-label" id="plan-note" style="margin-top:.15rem">Annual premium</div>
+      </div>
+      <div class="sp-price" id="plan-price">KShs. 7,574</div>
+    </div>
+  </div>
+
+  <div class="checkout-grid">
+
+    <!-- MPESA -->
+    <div class="card">
+      <div class="card-header"><h2><span class="badge">1</span>Pay via M-PESA</h2></div>
+      <div class="card-body">
+        <div class="mpesa-hero">
+          <div class="mpesa-logo-text">M-PESA</div>
+          <div class="mpesa-tagline">Send money · Pay bills · Buy airtime</div>
+        </div>
+        <div class="detail-box">
+          <div class="detail-row"><span class="detail-key">Paybill Number</span><span class="detail-val">247247</span></div>
+          <div class="detail-row"><span class="detail-key">Account Number</span><span class="detail-val">0711446293</span></div>
+          <div class="detail-row"><span class="detail-key">Amount</span><span class="detail-val" id="mpesa-amount">KShs. 7,574</span></div>
+        </div>
+        <div class="mpesa-steps">
+          <div class="mpesa-step">
+            <div class="step-num">1</div>
+            <div><div class="step-title">Go to M-PESA on your phone</div><div class="step-desc">Open the Safaricom app or dial <span class="step-highlight">*334#</span>, then select <strong>Lipa na M-PESA</strong>.</div></div>
+          </div>
+          <div class="mpesa-step">
+            <div class="step-num">2</div>
+            <div><div class="step-title">Select Pay Bill</div><div class="step-desc">Choose <strong>Pay Bill</strong>, then enter Business Number <span class="step-highlight">247247</span>.</div></div>
+          </div>
+          <div class="mpesa-step">
+            <div class="step-num">3</div>
+            <div><div class="step-title">Enter account number</div><div class="step-desc">Account Number: <span class="step-highlight">0711446293</span></div></div>
+          </div>
+          <div class="mpesa-step">
+            <div class="step-num">4</div>
+            <div><div class="step-title">Enter amount &amp; confirm</div><div class="step-desc">Enter <span class="step-highlight" id="step-amount">7,574</span>, enter your M-PESA PIN and confirm. You'll receive an SMS confirmation.</div></div>
+          </div>
+          <div class="mpesa-step">
+            <div class="step-num">5</div>
+            <div><div class="step-title">Send us your confirmation</div><div class="step-desc">Forward the M-PESA confirmation SMS to us on WhatsApp or call us. We'll activate your cover immediately.</div></div>
+          </div>
+        </div>
+        <button class="btn btn-gold btn-block" onclick="confirmPayment()">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.057 1.475 5.776L.057 24l6.345-1.652A11.951 11.951 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.027-1.38l-.361-.214-3.737.979.995-3.633-.237-.376A9.818 9.818 0 1112 21.818z"/></svg>
+          I've Paid — Send Confirmation via WhatsApp
+        </button>
+        <div class="security-row">
+          <div class="sec-badge"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>IRA Regulated</div>
+          <div class="sec-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Secure Payment</div>
+          <div class="sec-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.07 1.17 2 2 0 012.07 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.06 6.06l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>Instant Cover</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AGENT -->
+    <div>
+      <div class="card">
+        <div class="card-header"><h2><span class="badge">2</span>Talk to an Agent</h2></div>
+        <div class="card-body">
+          <p style="font-size:.88rem;color:var(--muted);margin-bottom:1.25rem">Need help choosing a plan, have questions, or prefer to pay another way? Our team is available to assist you right now.</p>
+          <div class="agent-options">
+            <a href="https://wa.me/254711446293?text=Hi%2C%20I%20would%20like%20to%20pay%20for%20my%20insurance%20cover." class="agent-option" target="_blank">
+              <div class="ao-icon wa"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.057 1.475 5.776L.057 24l6.345-1.652A11.951 11.951 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.027-1.38l-.361-.214-3.737.979.995-3.633-.237-.376A9.818 9.818 0 1112 21.818z"/></svg></div>
+              <div><div class="ao-label">Chat on WhatsApp</div><div class="ao-sub">+254 711 446 293 · Usually replies in minutes</div></div>
+              <svg class="ao-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="tel:+254711446293" class="agent-option">
+              <div class="ao-icon call"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.07 1.17 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.06 6.06l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg></div>
+              <div><div class="ao-label">Call Us Now</div><div class="ao-sub">+254 711 446 293 · Mon–Sat 8am–6pm</div></div>
+              <svg class="ao-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="sms:+254711446293" class="agent-option">
+              <div class="ao-icon sms"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></div>
+              <div><div class="ao-label">Send a Text / SMS</div><div class="ao-sub">+254 711 446 293 · We'll reply shortly</div></div>
+              <svg class="ao-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="or-divider">or reach us at</div>
+          <div style="background:var(--line-soft);border-radius:10px;padding:1.25rem;font-size:.85rem;color:var(--muted);line-height:1.8">
+            <strong style="color:var(--ink);display:block;margin-bottom:.5rem">Office Address</strong>
+            Mburu Gichua Road, Ereto Plaza 3rd Floor<br>
+            Nakuru City<br>
+            <a href="mailto:visioninsurance30@gmail.com" style="color:var(--gold-deep);font-weight:600">visioninsurance30@gmail.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:1.5rem">
+        <div class="card-header"><h2>Other Payment Methods</h2></div>
+        <div class="card-body" style="display:flex;flex-direction:column;gap:.75rem">
+          <div class="other-pay-row">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/></svg>
+            <span><strong>Cash</strong> — Pay in person at our Nakuru office</span>
+          </div>
+          <div class="other-pay-row">
+            <svg width="18" height="18" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10" stroke="#fff" stroke-width="2"/></svg>
+            <span><strong>Banker's Cheque</strong> — Payable to Joviul Insurance</span>
+          </div>
+          <div class="other-pay-row">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            <span><strong>Bank Transfer</strong> — Contact us for bank details</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand"><img src="assets/img/logo-mark.png" alt=""><span class="footer-brand-word">Joviul Insurance</span></div>
+        <div class="footer-reg">Regulated by the Insurance Regulatory Authority (IRA). Cover is underwritten by our licensed partner insurers.</div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Cover</h4>
+          <a href="private.html">Private Car</a>
+          <a href="commercial.html">Commercial</a>
+          <a href="psv.html">PSV</a>
+          <a href="other-products.html">Travel · Home · Student</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="index.html#about">About Us</a>
+          <a href="checkout.html">Pay Now</a>
+          <a href="mailto:visioninsurance30@gmail.com">Email Us</a>
+          <a href="tel:+254711446293">Call Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Mburu Gichua Road, Ereto Plaza 3rd Floor, Nakuru City</span>
+      <span>© 2026 Joviul Insurance Services ™ · joviul.co.ke</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/254711446293" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.057 1.475 5.776L.057 24l6.345-1.652A11.951 11.951 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.027-1.38l-.361-.214-3.737.979.995-3.633-.237-.376A9.818 9.818 0 1112 21.818z"/></svg>
+</a>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
